@@ -1,0 +1,447 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Oswald' sans-serif ;
+}
+
+.Header {
+    position: relative;
+    width: 100%;
+    height: 610px; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: black;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.Cancha {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0;
+    border-color: #000;
+}
+.fondo.activo {
+    opacity: 1;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+.Logo {
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    padding-right: 1200px;
+    padding-bottom: 450px;
+}
+
+.p1, .p2 {
+    color: whitesmoke; 
+    text-shadow: 0px 0.5px 1px black;
+    -webkit-text-stroke: 1px #000;
+    text-align: justify;
+    max-width: 780px;
+    padding-right: 500px;
+    line-height: 1.2;
+    font-family: 'Bebas Neue', sans-serif;;
+    font-size: 30px;
+    margin-top: 10px;  
+    font-weight: 700px;
+}
+
+.titulo1 {
+    font-size: 50px;
+    margin-top: 20px;
+    font-family: 'Oswald', sans-serif;;
+    font-weight: 500;
+    font-size: 60px;
+    padding-top: 100px;
+    letter-spacing: 0;
+    white-space: nowrap;
+    text-shadow: 0px 2px 5px black;
+    -webkit-text-stroke: 1px #000000;
+    color: white;
+    text-align: left;
+}
+
+.ParteCentral{
+    position: relative;
+    width: 100%;
+    height: 610px;
+    background-color:	#d1ccc0;
+    overflow: hidden;
+    border-top: 0.5px solid black;
+}
+.chicago-bulls-logo{
+    position: relative;
+    width: auto;
+    height: 428px;
+    top: 80px;
+    left: 38px;
+    object-fit: cover;
+    opacity: 75%;
+}
+.curvado {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid black;
+}
+.parte-izquierda {
+    flex: 1.5;
+    background-color: 	#f5f0e1;
+    z-index: 2;
+    position: relative;
+    height: 100%;
+    clip-path: ellipse(100% 100% at 0% 50%); 
+}
+.parte-derecha{
+    flex: 1;
+    position: real;
+    background-color:	#d1ccc0;
+    z-index: 1; 
+    overflow: hidden;
+    width: 100%;
+}
+
+.texto4 {
+    position: absolute;
+    left: 110px;
+    bottom: 480px;
+    text-shadow: 0px 5px 10px gray;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    color:	#1a1a1a;
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: 67.2px;
+    white-space: nowrap;
+}
+
+.group {
+    position: absolute;
+    width: 368px;
+    height: 457px;
+    top: 166px;
+    left: 193px;
+    opacity: 0.74;
+}
+    
+.GorraMostrador {
+    position: relative;
+    height: 457px;
+}
+
+.posada {
+    position: absolute;
+    width: 334px;
+    height: 376px;
+    top: 81px;
+    left: 16px;
+    object-fit: cover;
+}
+.nbaca-ow {
+    position: relative;
+    width: 368px;
+    height: 368px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.click{
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    position: absolute;
+    left: 360px;
+    top: 330px;
+    opacity: 0.74;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.click:hover{
+  opacity: 1;
+  animation: pulsar 1s infinite ease-in-out;
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.ellipse {
+  position: relative;
+  width: 360px;
+  height: 345px;
+  top: 40px;
+  left: 80px;
+  border-radius: 50%; 
+  box-shadow: 0 10px 40px white;
+  z-index: 1;
+
+}
+
+.insta {
+    position: relative;
+    top: 500px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    font-family: "Oswald", sans-serif;  
+    color:#1a1a1a;;
+    font-size: 48px;
+    letter-spacing: 0;
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+.link {
+  color: #b07c5c;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #8c5c3f;
+  text-decoration: underline;
+}
+
+.gorra-para-un-outfit {
+  position: relative;
+  bottom: 491px;
+  padding-top: 35px;
+  text-shadow: 0px 5px 10px gray;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  color: 	#1a1a1a;
+  font-size: 45px;
+  white-space: nowrap;
+
+}
+
+
+.beneficiosCapspot {
+  background-color: #eae7dc;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.titulo-beneficios {
+  font-family: 'Oswald', sans-serif;
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #111;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.contenedor-beneficios {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.beneficio {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 30px;
+  border-radius: 16px;
+  width: 300px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.beneficio:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.icono {
+  width: 100px;
+  margin-bottom: 20px;
+  filter: grayscale(100%);
+}
+
+.icono-estilo{
+    width: 100px;
+    margin-bottom: 20px;
+    filter: grayscale(100%);
+}
+
+.beneficio h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.beneficio p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.footer {
+  background-color: #000; 
+  color: #ddd;
+  font-family: 'Oswald', sans-serif;
+  border-top: 1px solid #333;
+}
+
+.footer-container {
+  display: flex;
+  max-width: 1200px;
+}
+
+.footer-logo img {
+  width: 300px;
+  filter: none;
+}
+
+.footer-links, .footer-social {
+  margin: 10px 0;
+}
+.footer-social{
+   padding-left: 200px;
+}
+.footer-links{
+    padding-left: 300px;
+}
+.footer-links h4,
+.footer-social h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li a,
+.footer-social a {
+  text-decoration: none;
+  color: #bbb;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover,
+.footer-social a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  background-color: #111; 
+  color: #888;
+  margin-top: 30px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366; 
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Header {
+  animation: fadeInUp 2s ease forwards;
+}
+
+.animacion {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animacion.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.img-animada {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 2.5s ease, transform 0.6s ease;
+}
+
+.img-animada.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.posada {
+  opacity: 0;
+  transform: translateX(-50px) scale(0.8);
+  transition: all 3s ease;
+}
+
+.posada.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.nbaca-ow {
+  opacity: 0;
+  transform: translateY(-50px) rotate(-10deg);
+  transition: all 3s ease;
+}
+
+.nbaca-ow.visible {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+}
