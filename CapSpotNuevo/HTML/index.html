@@ -10,9 +10,27 @@
     <title>CapSpot</title>
 </head>
 <body>
+    <header class="barra-elegante fade-in">
+  <div class="barra-contenido ">
+    <div class="barra-izquierda">
+      <img src="/CapSpotNuevo/Imagenes/imagenes/cap-icon-design-free-vector-removebg-preview.png" class="logo-barra" alt="CapSpot Logo">
+      <h1 class="titulo-barra">Cap<span class="Spot">Spot</span></h1>
+    </div>
+    <nav class="barra-menu">
+      <a href="#promociones">Inicio</a>
+      <a href="/CapSpotNuevo/HTML/index.html">Sobre Nosotros</a>
+      <a href="/CapSpotNuevo/HTML/catalogo.html">Catálogo</a>
+      <a href="#footer">Contacto</a>
+    </nav>
+    <div class="barra-iconos">
+      <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gmail.png" alt="Correo" class="icono-barra">
+      <span id="cart-count">0</span>
+      <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/carrito.png" alt="Carrito" class="Carrito" id="abrir">
+    </div>
+  </div>
+</header>
     <section class="Header">
         <img src="/CapSpotNuevo/Imagenes/imagenes/canchaPortada.jpg" alt="Cancha" class="Cancha fondo activo" id="fondo1"/>
-        <img class="Logo img-animada" src="/CapSpotNuevo/Imagenes/imagenes/logo-removebg-preview.png" alt="Logo" />
         <div class="content">
             <h1 class="titulo1">Lleva tu estilo a otro nivel</h1>
             <p class="p1">
@@ -66,7 +84,7 @@
     </div>
   </div>
 </section>
-<footer class="footer animacion">
+<footer class="footer animacion" id="footer">
   <div class="footer-container">
     <div class="footer-logo">
       <img src="/CapSpotNuevo/Imagenes/imagenes/logo-removebg-preview.png" alt="CapSpot Logo img-animada" class="img-animada"/>
@@ -97,7 +115,19 @@
 <a href="https://wa.me/82371397" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
 </a>
+
+<div id="carrito" class="carrito">
+  <div class="contenido">
+    <h2>Mi Carrito</h2>
+    <ul id="items"></ul>
+    <p id="total">Total: $0.00</p>
+    <button id="limpear">Vaciar Carrito</button>
+    <button id="cerrar">Cerrar</button>
+  </div>
+</div>
+
 <script src="/CapSpotNuevo/Jvs/animaciones.js"></script>
 <script src="/CapSpotNuevo/Jvs/imagenes.js"></script>
+<script src="/CapSpotNuevo/Jvs/Carrito.js"></script>
 </body>
 </html>

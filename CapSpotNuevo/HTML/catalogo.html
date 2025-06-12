@@ -20,11 +20,12 @@
       <a href="#promociones">Inicio</a>
       <a href="/CapSpotNuevo/HTML/index.html">Sobre Nosotros</a>
       <a href="#catalogo">Catálogo</a>
-      <a href="#">Contacto</a>
+      <a href="#footer">Contacto</a>
     </nav>
     <div class="barra-iconos">
       <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gmail.png" alt="Correo" class="icono-barra">
-      <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/carrito.png" alt="Carrito" class="Carrito">
+      <span id="cart-count">0</span>
+      <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/carrito.png" alt="Carrito" class="Carrito" id="abrir">
     </div>
   </div>
 </header>
@@ -301,7 +302,7 @@
     </div>
   </div>
 </section>
-<footer class="footer fade-in">
+<footer class="footer fade-in" id="footer">
   <div class="footer-container">
     <div class="footer-logo">
       <img src="/CapSpotNuevo/Imagenes/imagenes/logo-removebg-preview.png" alt="CapSpot Logo img-animada" class="img-animada"/>
@@ -333,10 +334,19 @@
 <a href="https://wa.me/82371397" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
 </a>
+<div id="carrito" class="carrito">
+  <div class="contenido">
+    <h2>Mi Carrito</h2>
+    <ul id="items"></ul>
+    <p id="total">Total: $0.00</p>
+    <button id="limpear">Vaciar Carrito</button>
+    <button id="cerrar">Cerrar</button>
+  </div>
+</div>
 <script src="/CapSpotNuevo/Jvs/AnimacionesGorras.js"></script>
 <script src="/CapSpotNuevo/Jvs/AnimacionCatalogo.js"></script>
 <script src="/CapSpotNuevo/Jvs/catalogo.js"></script>
 <script src="/CapSpotNuevo/Jvs/cuenta.js"></script>
-
+<script src="/CapSpotNuevo/Jvs/carrito.js"></script>
 </body>
 </html>
