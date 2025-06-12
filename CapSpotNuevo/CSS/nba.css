@@ -1,0 +1,89 @@
+        body {
+            margin: 0;
+            background: linear-gradient(180deg, #0b0c10, #1f2833);
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: linear-gradient(45deg, #FF3CAC, #784BA0, #2B86C5);
+            background-size: 300% 300%;
+            animation: gradient 10s ease infinite;
+            border-bottom: 5px solid #45A29E;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFD700;
+        }
+
+        @keyframes gradient {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        section {
+            margin: 50px auto;
+            max-width: 1400px;
+            padding: 0 20px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #1f2833;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.7);
+        }
+
+    .card img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        border-radius: 50%;
+        background: white;
+        padding: 10px;
+        display: block;
+        margin: 0 auto 15px auto;
+    }
+        .card h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #ccc;
+        }
