@@ -558,18 +558,18 @@ body, html {
 }
 
 .contenido {
-  background: linear-gradient(135deg, #0b0b0b, #1c1c1c);
-  margin: 5% auto;
-  padding: 25px 35px;
-  border: 1px solid #333;
+  background: #121212;
+  margin: 0 20px;
+  padding: 30px;
   width: 90%;
   max-width: 500px;
-  border-radius: 20px;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.6);
-  position: relative;
-  animation: slideIn 0.4s ease-out;
-  color: #fff;
-  font-family: 'Segoe UI', sans-serif;
+  border-radius: 20px;  
+  margin: 5% auto;
+  padding: 25px 35px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: slideIn 0.3s ease forwards;
 }
 
 @keyframes slideIn {
@@ -579,57 +579,58 @@ body, html {
 
 .contenido h2 {
   text-align: center;
-  margin-bottom: 25px;
-  font-size: 26px;
-  background: linear-gradient(90deg, #ff6b6b, #ffa600, #ffe600);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffa600;
+  letter-spacing: 1.1px;
+  user-select: none;
 }
 
 
 #items {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-  max-height: 250px;
+  max-height: 220px;
   overflow-y: auto;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   scrollbar-width: thin;
-  scrollbar-color: #ff6b6b #222;
+  scrollbar-color: #ffa600 #222;
 }
 
 #items li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid #444;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
   font-size: 16px;
+  color: #ddd;
 }
 
 #total {
-  font-weight: bold;
-  font-size: 22px;
+  font-weight: 600;
+  font-size: 20px;
   text-align: right;
   margin-bottom: 20px;
-  color: #ffe600;
+  color: #ffa600;
 }
 
 
 .contenido button {
-  background: linear-gradient(45deg, #ff6b6b, #ffa600, #ffe600, #ff6b6b);
-  background-size: 300% 300%;
-  color: white;
-  padding: 14px 24px;
-  margin: 8px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 17px;
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #ffa600;
+  color: #ffa600;
+  padding: 12px 0;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  font-size: 16px;
   font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: gradientMove 5s ease infinite;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+
 }
 
 @keyframes gradientMove {
@@ -639,37 +640,35 @@ body, html {
 }
 
 .contenido button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 230, 0, 0.8);
+  background-color: #ffa600;
+  color: #121212;
+  box-shadow: 0 4px 10px rgba(255, 166, 0, 0.6);
 }
 
-
 #cerrar {
-  background: linear-gradient(45deg, #555, #777, #999, #555);
-  background-size: 300% 300%;
-  color: white;
-  animation: gradientMove 5s ease infinite;
+  border-color: #888;
+  color: #888;
 }
 
 #cerrar:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  background-color: #888;
+  color: #121212;
+  box-shadow: none;
 }
-
 
 #cart-count {
-  background: linear-gradient(45deg, gray, white , gray);
-  color: black;
+  background-color: #ffa600;
+  color: #121212;
   border-radius: 50%;
-  padding: 5px 10px;
+  padding: 6px 12px;
   font-size: 14px;
-  position: relative;
-  right: 40px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
-  font-weight: bold;
-  animation: pulse 2s infinite;
+  font-weight: 700;
+  position: absolute;
+  right: 34px;
+  box-shadow: 0 0 8px rgba(255, 166, 0, 0.7);
+  user-select: none;
+  animation: none; /* sin animación pulsante */
 }
-
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.15); }

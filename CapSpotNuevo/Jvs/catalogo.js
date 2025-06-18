@@ -7,25 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextButton = document.querySelector('.carousel-button.next');
   const noResultsMsg = document.getElementById('noResultsMsg');
 
-  // Guardamos todos los items originales en un array
-  const allItems = Array.from(track.children); // cada <li class="carousel-item">
+  const allItems = Array.from(track.children); 
 
   let currentIndex = 0;
 
-  // Calcula cuántos items caben en la vista actual: usa ancho del contenedor y ancho de un item
   function itemsPerPage() {
     const containerWidth = track.parentElement.offsetWidth;
-    // Tomamos el primer elemento de allItems para medir ancho (incluyendo padding)
     if (allItems.length === 0) return 1;
     const itemStyle = window.getComputedStyle(allItems[0]);
     const itemWidth = allItems[0].getBoundingClientRect().width
                       + parseFloat(itemStyle.marginLeft)
                       + parseFloat(itemStyle.marginRight);
-    // floor para asegurarnos que quepan completos
     return Math.max(1, Math.floor(containerWidth / itemWidth));
   }
 
-  // Actualiza visibilidad de botones Prev/Next
   function updateButtons(filteredCount) {
     const perPage = itemsPerPage();
     const maxIndex = Math.ceil(filteredCount / perPage) - 1;
