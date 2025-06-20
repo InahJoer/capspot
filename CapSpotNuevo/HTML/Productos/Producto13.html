@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CapSpotNuevo/CSS/productos.css">
+    <title>Document</title>
+</head>
+<body>
+      <header class="barra-elegante fade-in">
+  <div class="barra-contenido ">
+    <div class="barra-izquierda">
+      <img src="/CapSpotNuevo/Imagenes/imagenes/cap-icon-design-free-vector-removebg-preview.png" class="logo-barra" alt="CapSpot Logo">
+      <h1 class="titulo-barra">Cap<span class="Spot">Spot</span></h1>
+    </div>
+    <nav class="barra-menu">
+      <a href="/CapSpotNuevo/HTML/index.html">Inicio</a>
+      <a href="/CapSpotNuevo/HTML/index.html">Sobre Nosotros</a>
+      <a href="/CapSpotNuevo/HTML/catalogo.html">Catálogo</a>
+      <a href="#footer">Contacto</a>
+      <a href="/CapSpotNuevo/HTML/nba.html">Noticias NBA</a>
+    </nav>
+    <div class="barra-iconos">
+       <a href="https://wa.me/82371397""><img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gmail.png" alt="Correo" class="icono-barra"></a>
+      <span id="cart-count">0</span>
+      <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/carrito.png" alt="Carrito" class="Carrito" id="abrir">
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="left">
+    <div class="image-container">
+      <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/denver.png" alt="Gorra Negra Denver Nuggets Champions 23/24" id="mainImage">
+    </div>
+    <button class="zoom-btn" id="abrirZoom">🔍 Ver más de cerca</button>
+  </div>
+
+  <div class="right">
+    <h2>Gorra Negra Denver Nuggets Edición Champions 23/24</h2>
+    <p id="typing-text" class="typing" data-text="Celebra el título 23/24 con esta exclusiva gorra negra de los Denver Nuggets. Presenta un diseño premium con bordados dorados y detalles que resaltan el logro histórico del equipo. Ideal para fanáticos que quieren lucir con orgullo su pasión y estilo.">
+    </p>
+
+    <div class="specs">
+      <ul>
+        <li>🏆 <strong>Material:</strong> Algodón de alta calidad con acabado premium, resistente y cómodo.</li>
+        <li>✨ <strong>Diseño:</strong> Logo oficial de los Nuggets con bordado dorado y detalle "Champions 23/24".</li>
+        <li>📏 <strong>Talla:</strong> Ajuste snapback para máxima comodidad y adaptabilidad.</li>
+        <li>☀ <strong>Protección:</strong> Visera curva con filtro solar UPF 50+ para proteger del sol.</li>
+        <li>🧼 <strong>Cuidado:</strong> Lavado a mano recomendado para preservar bordados y color.</li>
+      </ul>
+    </div>
+
+    <div class="price">C$731</div>
+    <button class="buy-button">Agregar al carrito 🛒</button>
+  </div>
+</div>
+
+
+    <div class="section">
+        <h4 class="recomendado">Recomendados para ti</h4>
+        <div class="products">
+            <div class="product-card">
+                <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/bullsGora.png" alt="Bulls">
+                <p>Chicago Bulls</p>
+            </div>
+            <div class="product-card">
+                <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras/Lakers.webp" alt="Lakers">
+                <p>Los Angeles Lakers</p>
+            </div>
+            <div class="product-card">
+                <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/miamiheat.png" alt="Heat">
+                <p>Miami Heat</p>
+            </div>
+        </div>
+    </div>
+
+<div class="comments">
+  <h3>Comentarios</h3>
+
+  <button class="open-modal">➕ Añadir Comentario</button>
+
+  <div id="comentarios-lista"></div>
+</div>
+
+<div id="modal-comentario" class="modal hidden">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form id="comment-form">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+
+      <label for="comentario">Comentario:</label>
+      <textarea id="comentario" rows="4" required></textarea>
+
+      <label>Calificación:</label>
+      <div class="stars" id="star-container"></div>
+      <input type="hidden" id="rating" value="0">
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+
+<div id="modalZoom" class="modal hidden">
+  <div class="modal-content zoom-modal-content">
+    <span class="close">&times;</span>
+    <img id="imagenZoom" src="" alt="Zoom Gorra">
+  </div>
+</div>
+<div id="carrito" class="carrito">
+  <div class="contenido">
+    <h2>Mi Carrito</h2>
+    <ul id="items"></ul>
+    <p id="total">Total: C$0.00</p>
+    <button id="limpear">Vaciar Carrito</button>
+    <button id="cerrar">Cerrar</button>
+  </div>
+</div>
+    <script src="/CapSpotNuevo/Jvs/Carrito.js"></script>
+    <script src="/CapSpotNuevo/Jvs/Comentarios13.js"></script>
+    <script src="/CapSpotNuevo/Jvs/zoom.js"> </script>
+<script src="/CapSpotNuevo/Jvs/teclearefecto.js"></script>    <script src="/CapSpotNuevo/Jvs/recomendados.js"></script>
+
+</body>
+</html>

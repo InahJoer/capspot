@@ -14,43 +14,46 @@
       <h1 class="titulo-barra">Cap<span class="Spot">Spot</span></h1>
     </div>
     <nav class="barra-menu">
-      <a href="#promociones">Inicio</a>
+      <a href="/CapSpotNuevo/HTML/index.html">Inicio</a>
       <a href="/CapSpotNuevo/HTML/index.html">Sobre Nosotros</a>
-      <a href="#catalogo">Catálogo</a>
+      <a href="/CapSpotNuevo/HTML/catalogo.html">Catálogo</a>
       <a href="#footer">Contacto</a>
       <a href="/CapSpotNuevo/HTML/nba.html">Noticias NBA</a>
     </nav>
     <div class="barra-iconos">
-      <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gmail.png" alt="Correo" class="icono-barra">
+       <a href="https://wa.me/82371397""><img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gmail.png" alt="Correo" class="icono-barra"></a>
       <span id="cart-count">0</span>
       <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/carrito.png" alt="Carrito" class="Carrito" id="abrir">
     </div>
   </div>
 </header>
+
     <div class="container">
         <div class="left">
+
             <div class="image-container">
-                <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks3.webp" alt="Gorra Blanca Knicks">
-                <div class="product-name">Gorra Blanca Knicks</div>
+              <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/GoldenState.png" alt="Gorra Golden State" id="mainImage">
             </div>
+            <button class="zoom-btn" id="abrirZoom">🔍 Ver más de cerca</button>
         </div>
+        
 
         <div class="right">
-            <h2>Gorra Blanca Oficial Knicks</h2>
-            <p id="typing-text" class="typing"></p>
+            <h2>Gorra Azul Oficial GSW </h2>
+            <p id="typing-text" class="typing" data-text="La gorra azul oficial de los Golden State Warriors es el accesorio perfecto para los verdaderos fanáticos del baloncesto. Confeccionada con algodón premium y un diseño moderno, combina comodidad, durabilidad y estilo."></p>
+
 
             <div class="specs">
-                <ul>
-                    <li>🏷 100% algodón premium</li>
-                    <li>🏀 Logo bordado Knicks de alta definición</li>
-                    <li>📏 Talla ajustable (Snapback)</li>
-                    <li>☀ Protección solar UPF 50+</li>
-                    <li>🧼 Lavable a mano</li>
-                </ul>
-            </div>
-
-            <div class="price">$27.99</div>
-            <button class="buy-button">Agregar al carrito 🛒</button>
+      <ul>
+        <li>🏷 <strong>Material:</strong> 100% algodón premium, suave y duradero.</li>
+        <li>🎯 <strong>Diseño:</strong> Logo bordado en alta definición con acabados dorados vibrantes.</li>
+        <li>📏 <strong>Talla:</strong> Ajuste tipo snapback, adaptable a cualquier tamaño de cabeza.</li>
+        <li>🧼 <strong>Cuidado:</strong> Lavable a mano para preservar calidad y forma.</li>
+        <li>🎽 <strong>Estilo:</strong> Visera curva clásica, ideal para outfits deportivos o casuales.</li>
+      </ul>
+    </div>
+    <div class="price">C$320</div>
+    <button class="buy-button">Agregar al carrito 🛒</button>
         </div>
     </div>
 
@@ -58,39 +61,69 @@
         <h4 class="recomendado">Recomendados para ti</h4>
         <div class="products">
             <div class="product-card">
-                <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/bullsGora.png" alt="Bulls">
-                <p>Chicago Bulls</p>
+                <a href="/CapSpotNuevo/HTML/Productos/Producto3.html"><img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/bullsGora.png" alt="Bulls">
+                <p>Chicago Bulls</p></a>
             </div>
             <div class="product-card">
-                <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/lakersGorra.png" alt="Lakers">
-                <p>Los Angeles Lakers</p>
+                <a href="/CapSpotNuevo/HTML/Productos/Producto2.html"><img src="/CapSpotNuevo/Imagenes/imagenes/Gorras/Lakers.webp" alt="Lakers">
+                <p>Los Angeles Lakers</p></a>
             </div>
             <div class="product-card">
-                <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/heatGorra.png" alt="Heat">
-                <p>Miami Heat</p>
+                <a href="/CapSpotNuevo/HTML/Productos/Producto13.html"><img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/denver.png" alt="Lakers">
+                <p>Denver Nuggets</p></a>
             </div>
         </div>
     </div>
 
-    <div class="comments">
-        <h3>Comentarios</h3>
+<div class="comments">
+  <h3>Comentarios</h3>
 
-        <div class="comment">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptas neque distinctio provident eligendi, explicabo quia impedit tempora corporis harum sunt quod natus tenetur quae deserunt. Labore ut ad quia.</p>
-            <div class="comment-author">- Carlos G.</div>
-        </div>
+  <button class="open-modal">➕ Añadir Comentario</button>
 
-        <div class="comment">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente asperiores alias adipisci numquam debitis voluptas molestias ratione nisi excepturi placeat veritatis expedita voluptates illum, cupiditate accusantium incidunt nemo repellendus. Voluptatibus!</p>
-            <div class="comment-author">- Mariana L.</div>
-        </div>
+  <div id="comentarios-lista"></div>
+</div>
 
-        <div class="comment">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem saepe sunt quaerat ex! Asperiores veritatis obcaecati consectetur earum officiis dolorum ducimus soluta, iure qui commodi explicabo nam ab corporis. Sequi.</p>
-            <div class="comment-author">- Andrés V.</div>
-        </div>
-    </div>
+<div id="modal-comentario" class="modal hidden">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form id="comment-form">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
 
+      <label for="comentario">Comentario:</label>
+      <textarea id="comentario" rows="4" required></textarea>
+
+      <label>Calificación:</label>
+      <div class="stars" id="star-container"></div>
+      <input type="hidden" id="rating" value="0">
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+
+<div id="modalZoom" class="modal hidden">
+  <div class="modal-content zoom-modal-content">
+    <span class="close">&times;</span>
+    <img id="imagenZoom" src="" alt="Zoom Gorra">
+  </div>
+</div>
+
+<div id="carrito" class="carrito">
+  <div class="contenido">
+    <h2>Mi Carrito</h2>
+    <ul id="items"></ul>
+    <p id="total">Total: C$0.00</p>
+    <button id="limpear">Vaciar Carrito</button>
+    <button id="cerrar">Cerrar</button>
+  </div>
+</div>
+
+    <script src="/CapSpotNuevo/Jvs/Carrito.js"></script>
+    <script src="/CapSpotNuevo/Jvs/Comentarios.js"></script>
+    <script src="/CapSpotNuevo/Jvs/zoom.js"> </script>
     <script src="/CapSpotNuevo/Jvs/teclearefecto.js"></script>
+    <script src="/CapSpotNuevo/Jvs/recomendados.js"></script>
+
 </body>
 </html>

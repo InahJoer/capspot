@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('searchInput');
   const priceFilter = document.getElementById('priceFilter');
-  const colorFilter = document.getElementById('colorFilter');
   const track = document.querySelector('.carousel-track');
   const prevButton = document.querySelector('.carousel-button.prev');
   const nextButton = document.querySelector('.carousel-button.next');
@@ -12,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0;
 
   function itemsPerPage() {
-    const containerWidth = track.parentElement.offsetWidth;
+const container = track.parentElement;
+const containerWidth = container.offsetWidth;
     if (allItems.length === 0) return 1;
     const itemStyle = window.getComputedStyle(allItems[0]);
     const itemWidth = allItems[0].getBoundingClientRect().width
@@ -36,49 +36,60 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Mueve carrusel a la página dada (0-based)
-  function moveToIndex(index, filteredCount) {
-    const perPage = itemsPerPage();
-    const maxIndex = Math.ceil(filteredCount / perPage) - 1;
-    if (index < 0) index = 0;
-    if (index > maxIndex) index = maxIndex;
-    const shiftPercent = index * 100; 
-    // Como cada “página” equivale al ancho completo de la vista, desplazamos en porcentajes:
-    track.style.transform = `translateX(-${shiftPercent}%)`;
-    currentIndex = index;
-    updateButtons(filteredCount);
-  }
+function moveToIndex(index, filteredCount) {
+  const item = track.children[0];
+  if (!item) return;
 
-  // Reconstruye el track con los items filtrados y reajusta carrusel
+  const container = track.closest('.carousel-track-container');
+  const containerWidth = container.getBoundingClientRect().width;
+
+  const itemRect = item.getBoundingClientRect();
+  const style = window.getComputedStyle(item);
+  const marginLeft = parseFloat(style.marginLeft) || 0;
+  const marginRight = parseFloat(style.marginRight) || 0;
+
+  const itemWidth = itemRect.width + marginLeft + marginRight;
+
+  const perPage = Math.max(1, Math.floor(containerWidth / itemWidth));
+  const maxIndex = Math.max(0, Math.ceil(filteredCount / perPage) - 1);
+
+  if (index < 0) index = 0;
+  if (index > maxIndex) index = maxIndex;
+
+  const shiftPx = index * perPage * itemWidth;
+
+  track.style.transform = `translateX(-${shiftPx}px)`;
+
+  currentIndex = index;
+
+  prevButton.classList.toggle('hidden', index <= 0);
+  nextButton.classList.toggle('hidden', index >= maxIndex);
+}
+
   function rebuildCarousel() {
     const searchText = searchInput.value.trim().toLowerCase();
     const priceValue = priceFilter.value;
-    const colorValue = colorFilter.value;
-    // Filtramos todos los items según data-atributos del <article class="card-gorra">
+
+
     const filtered = allItems.filter(li => {
       const article = li.querySelector('.card-gorra');
       if (!article) return false;
       const name = (article.dataset.name || '').toLowerCase();
       const price = parseFloat(article.dataset.price || '0');
-      const color = article.dataset.color || '';
-      let matchesSearch = true, matchesPrice = true, matchesColor = true;
+      let matchesSearch = true, matchesPrice = true;
       if (searchText !== '') {
         matchesSearch = name.includes(searchText);
       }
       if (priceValue === 'lt30') {
-        matchesPrice = price < 30;
+        matchesPrice = price < 500;
       } else if (priceValue === '30-33') {
-        matchesPrice = price >= 30 && price <= 33;
+        matchesPrice = price >= 300 && price <= 600;
       } else if (priceValue === 'gt33') {
-        matchesPrice = price > 33;
+        matchesPrice = price > 500;
       }
-      if (colorValue !== 'all') {
-        matchesColor = (color === colorValue);
-      }
-      return matchesSearch && matchesPrice && matchesColor;
+      return matchesSearch && matchesPrice;
     });
 
-    // Vaciar track
     track.innerHTML = '';
     if (filtered.length === 0) {
       noResultsMsg.style.display = 'block';
@@ -88,24 +99,24 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       noResultsMsg.style.display = 'none';
     }
-    // Insertar solo los elementos filtrados
+
     filtered.forEach(li => {
       track.appendChild(li);
     });
-    // Resetear la posición a la primera página
+
     currentIndex = 0;
-    // Forzamos quitar transform antes de mover
+
     track.style.transform = 'translateX(0)';
-    // Ajustar botones según nuevo count
+   
     moveToIndex(0, filtered.length);
   }
 
-  // Eventos de filtros
+
   searchInput.addEventListener('input', rebuildCarousel);
   priceFilter.addEventListener('change', rebuildCarousel);
-  colorFilter.addEventListener('change', rebuildCarousel);
 
-  // Eventos de navegación
+
+
   nextButton.addEventListener('click', () => {
     const filteredCount = track.children.length;
     moveToIndex(currentIndex + 1, filteredCount);
@@ -115,14 +126,12 @@ document.addEventListener('DOMContentLoaded', () => {
     moveToIndex(currentIndex - 1, filteredCount);
   });
 
-  // Resize: reajusta si cambia itemsPerPage
   window.addEventListener('resize', () => {
     const filteredCount = track.children.length;
     moveToIndex(currentIndex, filteredCount);
   });
 
-  // Inicial: coloca todos los items originales en el track y oculta Prev
-  // Aseguramos que track inicialmente contenga todos:
+
   track.innerHTML = '';
   allItems.forEach(li => track.appendChild(li));
   moveToIndex(0, allItems.length);

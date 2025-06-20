@@ -106,11 +106,11 @@ circulo.addEventListener('click', () => {
     indiceActual = (indiceActual + 1) % promociones.length;
     const promo = promociones[indiceActual];
 
-    // 🟢 Calculamos el índice siguiente para la vista previa (Caja-gorra)
+
     const siguienteIndice = (indiceActual + 1) % promociones.length;
     const siguientePromo = promociones[siguienteIndice];
 
-    // Actualizamos la promoción principal
+
     fondo.src = promo.fondo;
     logo.src = promo.logo;
     descripcion.innerHTML = `<span>${promo.descripcion}</span>`;
@@ -126,12 +126,12 @@ circulo.addEventListener('click', () => {
     podio.style.left = "";
     podio.style.top = "";
 
-    // Aplicar estilos específicos
+
     aplicarEstilos(logo, promo.estilos.logo);
     aplicarEstilos(gorra, promo.estilos.gorra);
     aplicarEstilos(podio, promo.estilos.podio);
 
-    // 🟢 Actualizamos la Caja-gorra con el siguiente
+   
     gorraCaja.src = siguientePromo.gorra;
     podioCaja.src = siguientePromo.podio;
     if (siguientePromo.equipo === "Knicks") {

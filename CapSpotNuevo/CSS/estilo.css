@@ -664,10 +664,10 @@ body, html {
   font-size: 14px;
   font-weight: 700;
   position: absolute;
-  right: 34px;
+  right: 45px;
   box-shadow: 0 0 8px rgba(255, 166, 0, 0.7);
   user-select: none;
-  animation: none; /* sin animación pulsante */
+  animation: none; 
 }
 @keyframes pulse {
   0% { transform: scale(1); }

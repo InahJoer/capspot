@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   equiposContainer.innerHTML = "Cargando equipos...";
   partidosContainer.innerHTML = "Cargando partidos...";
 
-  // Cargar equipos NBA
   fetch("https://www.thesportsdb.com/api/v1/json/123/search_all_teams.php?l=NBA")
     .then(res => {
       if (!res.ok) throw new Error("Error en respuesta equipos");
@@ -14,20 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       equiposContainer.innerHTML = "";
       data.teams.forEach(team => {
-        // Crear tarjeta equipo
+  
         const card = document.createElement("div");
         card.className = "card";
 
-        // Imagen y nombre del equipo
         card.innerHTML = `
-          <img src="${team.strTeamBadge}" alt="${team.strTeam}" />
           <h3>${team.strTeam}</h3>
           <p>${team.strStadium}</p>
         `;
         equiposContainer.appendChild(card);
       });
 
-      // Cargar próximos partidos
       return fetch("https://www.thesportsdb.com/api/v1/json/123/eventsnextleague.php?id=4387");
     })
     .then(res => {
@@ -37,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       partidosContainer.innerHTML = "";
       data.events.forEach(event => {
-        // Crear tarjeta partido
+
         const card = document.createElement("div");
         card.className = "card";
 

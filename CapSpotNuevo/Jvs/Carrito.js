@@ -19,14 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
         cart.forEach((item, index) => {
             const li = document.createElement("li");
             li.innerHTML = `
-                ${item.name} - $${item.price} x ${item.quantity}
+                ${item.name} - C$${item.price} x ${item.quantity}
                 <button data-index="${index}">Eliminar</button>
             `;
             items.appendChild(li);
             total += item.price * item.quantity;
         });
 
-        totalElem.textContent = `Total: $${total.toFixed(2)}`;
+        totalElem.textContent = `Total: C$${total.toFixed(2)}`;
         saveCart();
 
         const cartCount = document.getElementById("cart-count");
@@ -35,25 +35,41 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+
     document.querySelectorAll(".btn-comprar").forEach(button => {
         button.addEventListener("click", (e) => {
             const card = e.target.closest(".card-gorra, .topsale-card, .offer-card");
-            const name = card.querySelector("h3").textContent;
-            let priceText = card.querySelector(".precio, .price .discounted");
-            if (!priceText) priceText = card.querySelector(".precio");
-            const price = parseFloat(priceText.textContent.replace(/[^0-9.]/g, ''));
+            const name = card.querySelector("h3")?.textContent || "Producto";
+            let priceText = card.querySelector(".precio, .price .discounted")?.textContent || "0";
+            const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
 
-            const existentes = cart.find(item => item.name === name);
-            if (existentes) {
-                existentes.quantity += 1;
-            } else {
-                cart.push({ name, price, quantity: 1 });
-            }
-
-            actualizar();
-            alert("Producto añadido al carrito");
+            agregarAlCarrito(name, price);
         });
     });
+
+ 
+    document.querySelectorAll(".buy-button").forEach(button => {
+        button.addEventListener("click", () => {
+            const name = document.querySelector(".right h2")?.textContent || "Producto";
+            let priceText = document.querySelector(".right .price")?.textContent || "0";
+            const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
+
+            agregarAlCarrito(name, price);
+        });
+    });
+
+    function agregarAlCarrito(name, price) {
+        const existentes = cart.find(item => item.name === name);
+        if (existentes) {
+            existentes.quantity += 1;
+        } else {
+            cart.push({ name, price, quantity: 1 });
+        }
+
+        actualizar();
+        alert("Producto añadido al carrito");
+    }
+
 
     items.addEventListener("click", (e) => {
         if (e.target.tagName === "BUTTON") {
@@ -68,9 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
         actualizar();
     });
 
+    
     abrir.addEventListener("click", () => {
         carrito.style.display = "block";
     });
+
 
     cerrar.addEventListener("click", () => {
         carrito.style.display = "none";

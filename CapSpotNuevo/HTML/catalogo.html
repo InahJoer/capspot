@@ -24,7 +24,7 @@
       <a href="/CapSpotNuevo/HTML/nba.html">Noticias NBA</a>
     </nav>
     <div class="barra-iconos">
-      <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gmail.png" alt="Correo" class="icono-barra">
+      <a href="https://wa.me/82371397""><img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gmail.png" alt="Correo" class="icono-barra"></a>
       <span id="cart-count">0</span>
       <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/carrito.png" alt="Carrito" class="Carrito" id="abrir">
     </div>
@@ -51,37 +51,23 @@
     <section class="Catalogo-gorras" id="catalogo">
   <h2 class="titulo-catalogo">Catálogo de Gorras New York Knicks</h2>
 
-   <!-- Barra de filtros -->
+  
   <div class="filter-bar">
     <label class="filter-item">
       <i class="fas fa-search"></i>
       <input type="text" id="searchInput" placeholder="Buscar gorra..." />
     </label>
-    <!-- Rango de precio -->
+
     <label class="filter-item">
       <i class="fas fa-dollar-sign"></i>
       <select id="priceFilter">
         <option value="all">Todas</option>
-        <option value="lt30">Menos de $30</option>
-        <option value="30-33">Entre $30 y $33</option>
-        <option value="gt33">Más de $33</option>
+        <option value="lt30">Menos de C$500</option>
+        <option value="30-33">Entre C$300 y C$600</option>
+        <option value="gt33">Más de C$500</option>
       </select>
     </label>
-    <!-- Variante / Color -->
-    <label class="filter-item">
-      <i class="fas fa-tags"></i>
-      <select id="colorFilter">
-        <option value="all">Todas</option>
-        <option value="Negra">Negra</option>
-        <option value="Azul">Azul</option>
-        <option value="Blanca">Blanca</option>
-        <option value="Retro">Retro</option>
-        <option value="Vintage">Vintage</option>
-        <option value="Snapback">Snapback</option>
-        <option value="Trucker">Trucker</option>
-        <option value="Limited">Edición Limitada</option>
-      </select>
-    </label>
+
   </div>
 
   <!-- Carrusel --->
@@ -90,123 +76,138 @@
     <div class="carousel-track-container">
       <ul class="carousel-track">
         <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Negra Knicks" data-price="29.99" data-color="Negra">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks1.webp" alt="Gorra Negra Knicks" class="img-gorra">
-            <h3>Gorra Negra Knicks</h3>
-            <p class="precio">$29.99</p>
+        <article class="card-gorra" data-name="Gorra Golden State Warriors" data-price="320" data-color="Azul">
+          <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/GoldenState.png" alt="Gorra Golden State Warriors" class="img-gorra">
+          <h3>Gorra Golden State Warriors</h3>
+          <p class="precio">C$320</p>
+          <button class="btn-comprar">Comprar</button>
+          <a href="/CapSpotNuevo/HTML/Productos/Producto1.html"><button class="btn-deta">Ver Detalles</button></a>
+        </article>
+        </li>
+        <li class="carousel-item">
+        <article class="card-gorra" data-name="Gorra Los Angeles Lakers" data-price="350" data-color="Morado">
+          <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras/Lakers.webp" alt="Gorra Los Angeles Lakers" class="img-gorra">
+          <h3>Gorra Los Angeles Lakers</h3>
+          <p class="precio">C$350</p>
+          <button class="btn-comprar">Comprar</button>
+          <a href="/CapSpotNuevo/HTML/Productos/Producto2.html"><button class="btn-deta">Ver Detalles</button></a>
+        </article>
+        </li>
+        <li class="carousel-item">
+        <article class="card-gorra" data-name="Gorra Chicago Bulls" data-price="400" data-color="Rojo">
+          <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras/Bulls.png" alt="Gorra Chicago Bulls" class="img-gorra">
+          <h3>Gorra Chicago Bulls</h3>
+          <p class="precio">C$400</p>
+          <button class="btn-comprar">Comprar</button>
+          <a href="/CapSpotNuevo/HTML/Productos/Producto3.html"><button class="btn-deta">Ver Detalles</button></a>
+        </article>
+        </li>
+        <li class="carousel-item">
+        <article class="card-gorra" data-name="Gorra Miami Heat" data-price="380" data-color="Negro">
+          <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/miamiheat.png" alt="Gorra Miami Heat" class="img-gorra">
+          <h3>Gorra Miami Heat</h3>
+          <p class="precio">C$380</p>
+          <button class="btn-comprar">Comprar</button>
+          <a href="/CapSpotNuevo/HTML/Productos/Producto4.html"><button class="btn-deta">Ver Detalles</button></a>
+        </article>
+        </li>
+        <li class="carousel-item">
+        <article class="card-gorra" data-name="Gorra Brooklyn Nets" data-price="450" data-color="Negro">
+          <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/nets.png" alt="Gorra Brooklyn Nets" class="img-gorra">
+          <h3>Gorra Brooklyn Nets</h3>
+          <p class="precio">C$450</p>
+          <button class="btn-comprar">Comprar</button>
+          <a href="/CapSpotNuevo/HTML/Productos/Producto5.html"><button class="btn-deta">Ver Detalles</button></a>
+        </article>
+        </li>
+        <li class="carousel-item">
+        <article class="card-gorra" data-name="Gorra Boston Celtics" data-price="480" data-color="Verde">
+          <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/Boston.png" alt="Gorra Boston Celtics" class="img-gorra">
+          <h3>Gorra Boston Celtics</h3>
+          <p class="precio">C$480</p>
+          <button class="btn-comprar">Comprar</button>
+          <a href="/CapSpotNuevo/HTML/Productos/Producto6.html"><button class="btn-deta">Ver Detalles</button></a>
+        </article>
+        </li>
+        <li class="carousel-item">
+        <article class="card-gorra" data-name="Gorra Dallas Mavericks" data-price="500" data-color="Azul">
+          <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/dallas.png" alt="Gorra Dallas Mavericks" class="img-gorra">
+          <h3>Gorra Dallas Mavericks</h3>
+          <p class="precio">C$500</p>
+          <button class="btn-comprar">Comprar</button>
+          <a href="/CapSpotNuevo/HTML/Productos/Producto7.html"><button class="btn-deta">Ver Detalles</button></a>
+        </article>
+        </li>
+        <li class="carousel-item">
+        <article class="card-gorra" data-name="Gorra Philadelphia 76ers Edición Limitada" data-price="700" data-color="Rojo">
+          <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/philadelphia.png" alt="Gorra Philadelphia 76ers Edición Limitada" class="img-gorra">
+          <h3>Gorra Philadelphia 76ers Edición Limitada</h3>
+          <p class="precio">C$700</p>
+          <button class="btn-comprar">Comprar</button>
+          <a href="/CapSpotNuevo/HTML/Productos/Producto8.html"><button class="btn-deta">Ver Detalles</button></a>
+        </article>
+        </li>
+        <li class="carousel-item">
+        <article class="card-gorra" data-name="Gorra Toronto Raptors Premium" data-price="680" data-color="Rojo">
+          <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/raptops.png" alt="Gorra Toronto Raptors Premium" class="img-gorra">
+          <h3>Gorra Toronto Raptors Premium</h3>
+          <p class="precio">C$680</p>
+          <button class="btn-comprar">Comprar</button>
+          <a href="/CapSpotNuevo/HTML/Productos/Producto9.html"><button class="btn-deta">Ver Detalles</button></a>
+        </article>
+        </li>
+        <li class="carousel-item">
+        <article class="card-gorra" data-name="Gorra Milwaukee Bucks" data-price="460" data-color="Verde">
+          <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/bucks.png" alt="Gorra Milwaukee Bucks" class="img-gorra">
+          <h3>Gorra Milwaukee Bucks</h3>
+          <p class="precio">C$460</p>
+          <button class="btn-comprar">Comprar</button>
+          <a href="/CapSpotNuevo/HTML/Productos/Producto10.html"><button class="btn-deta">Ver Detalles</button></a>
+        </article>
+        </li>
+        <li class="carousel-item">
+          <article class="card-gorra" data-name="Gorra San Antonio Spurs" data-price="740" data-color="Negra">
+            <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/Spurs.png" alt="Gorra San Antonio Spurs" class="img-gorra">
+            <h3>Gorra San Antonio Spurs</h3>
+            <p class="precio">C$750</p>
             <button class="btn-comprar">Comprar</button>
+            <a href="/CapSpotNuevo/HTML/Productos/Producto11.html"><button class="btn-deta">Ver Detalles</button></a>
           </article>
         </li>
         <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Azul Knicks" data-price="31.99" data-color="Azul">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks2.webp" alt="Gorra Azul Knicks" class="img-gorra">
-            <h3>Gorra Azul Knicks</h3>
-            <p class="precio">$31.99</p>
+          <article class="card-gorra" data-name="Gorra Utah Jazz" data-price="400" data-color="Azul">
+            <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/Jazz.png" alt="Gorra Utah Jazz" class="img-gorra">
+            <h3>Gorra Utah Jazz</h3>
+            <p class="precio">C$400</p>
             <button class="btn-comprar">Comprar</button>
+            <a href="/CapSpotNuevo/HTML/Productos/Producto12.html"><button class="btn-deta">Ver Detalles</button></a>
           </article>
         </li>
         <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Blanca Knicks" data-price="27.99" data-color="Blanca">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks3.webp" alt="Gorra Blanca Knicks" class="img-gorra">
-            <h3>Gorra Blanca Knicks</h3>
-            <p class="precio">$27.99</p>
+          <article class="card-gorra" data-name="Gorra Denver Nuggets" data-price="731" data-color="Azul">
+            <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/denver.png" alt="Gorra Denver Nuggets" class="img-gorra">
+            <h3>Gorra Denver Nuggets</h3>
+            <p class="precio">C$731</p>
             <button class="btn-comprar">Comprar</button>
+            <a href="/CapSpotNuevo/HTML/Productos/Producto13.html"><button class="btn-deta">Ver Detalles</button></a>
           </article>
         </li>
         <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Retro Knicks" data-price="32.99" data-color="Retro">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks4.webp" alt="Gorra Retro Knicks" class="img-gorra">
-            <h3>Gorra Retro Knicks</h3>
-            <p class="precio">$32.99</p>
+          <article class="card-gorra" data-name="Gorra Indiana Pacers" data-price="600" data-color="Amarilla">
+            <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/Pacers.webp" alt="Gorra Indiana Pacers" class="img-gorra">
+            <h3>Gorra Indiana Pacers</h3>
+            <p class="precio">C$600</p>
             <button class="btn-comprar">Comprar</button>
+            <a href="/CapSpotNuevo/HTML/Productos/Producto14.html"><button class="btn-deta">Ver Detalles</button></a>
           </article>
         </li>
         <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Edición Limitada Knicks" data-price="33.99" data-color="Limited">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks5.webp" alt="Gorra Edición Limitada Knicks" class="img-gorra">
-            <h3>Gorra Edición Limitada</h3>
-            <p class="precio">$33.99</p>
+          <article class="card-gorra" data-name="Gorra Miami Heat Retro" data-price="787" data-color="Roja">
+            <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/miamiretro.png" alt="Gorra Miami Heat Retro" class="img-gorra">
+            <h3>Gorra Miami Heat Retro</h3>
+            <p class="precio">C$787</p>
             <button class="btn-comprar">Comprar</button>
-          </article>
-        </li>
-        <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Vintage Knicks" data-price="28.99" data-color="Vintage">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks6.webp" alt="Gorra Vintage Knicks" class="img-gorra">
-            <h3>Gorra Vintage Knicks</h3>
-            <p class="precio">$28.99</p>
-            <button class="btn-comprar">Comprar</button>
-          </article>
-        </li>
-        <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Distressed Knicks" data-price="30.49" data-color="Vintage">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks7.webp" alt="Gorra Distressed Knicks" class="img-gorra">
-            <h3>Gorra Distressed Knicks</h3>
-            <p class="precio">$30.49</p>
-            <button class="btn-comprar">Comprar</button>
-          </article>
-        </li>
-        <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Snapback Knicks" data-price="29.49" data-color="Snapback">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks8.webp" alt="Gorra Snapback Knicks" class="img-gorra">
-            <h3>Gorra Snapback Knicks</h3>
-            <p class="precio">$29.49</p>
-            <button class="btn-comprar">Comprar</button>
-          </article>
-        </li>
-        <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Trucker Knicks" data-price="31.49" data-color="Trucker">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks9.webp" alt="Gorra Trucker Knicks" class="img-gorra">
-            <h3>Gorra Trucker Knicks</h3>
-            <p class="precio">$31.49</p>
-            <button class="btn-comprar">Comprar</button>
-          </article>
-        </li>
-        <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Deportivo Knicks" data-price="34.49" data-color="Azul">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks10.webp" alt="Gorra Deportivo Knicks" class="img-gorra">
-            <h3>Gorra Deportivo Knicks</h3>
-            <p class="precio">$34.49</p>
-            <button class="btn-comprar">Comprar</button>
-          </article>
-        </li>
-        <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Classic Knicks" data-price="26.99" data-color="Negra">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks11.webp" alt="Gorra Classic Knicks" class="img-gorra">
-            <h3>Gorra Classic Knicks</h3>
-            <p class="precio">$26.99</p>
-            <button class="btn-comprar">Comprar</button>
-          </article>
-        </li>
-        <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Elite Knicks" data-price="35.99" data-color="Azul">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks12.webp" alt="Gorra Elite Knicks" class="img-gorra">
-            <h3>Gorra Elite Knicks</h3>
-            <p class="precio">$35.99</p>
-            <button class="btn-comprar">Comprar</button>
-          </article>
-        </li>
-        <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Championship Knicks" data-price="28.49" data-color="Negra">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks13.webp" alt="Gorra Championship Knicks" class="img-gorra">
-            <h3>Gorra Championship Knicks</h3>
-            <p class="precio">$28.49</p>
-            <button class="btn-comprar">Comprar</button>
-          </article>
-        </li>
-        <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Retro 90s Knicks" data-price="32.49" data-color="Retro">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks14.webp" alt="Gorra Retro 90s Knicks" class="img-gorra">
-            <h3>Gorra Retro 90s Knicks</h3>
-            <p class="precio">$32.49</p>
-            <button class="btn-comprar">Comprar</button>
-          </article>
-        </li>
-        <li class="carousel-item">
-          <article class="card-gorra" data-name="Gorra Modern Knicks" data-price="30.99" data-color="Azul">
-            <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks15.webp" alt="Gorra Modern Knicks" class="img-gorra">
-            <h3>Gorra Modern Knicks</h3>
-            <p class="precio">$30.99</p>
-            <button class="btn-comprar">Comprar</button>
+            <a href="/CapSpotNuevo/HTML/Productos/Producto15.html"><button class="btn-deta">Ver Detalles</button></a>
           </article>
         </li>
       </ul>
@@ -222,55 +223,53 @@
   <div class="container">
     <h2 class="sales-title">Ofertas Especiales</h2>
     <div class="offers-grid">
-      <!-- Ejemplo de 4 ofertas; puedes duplicar más -->
       <div class="offer-card" data-deadline="2025-06-30T23:59:59">
         <div class="img-container">
-          <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks1.webp" alt="Gorra Negra Knicks - Oferta">
+          <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/Spurs.png" alt="Gorra San Antonio Spurs - Oferta">
           <div class="badge">-20%</div>
         </div>
         <div class="offer-content">
-          <h3>Gorra Negra Knicks</h3>
-          <p class="price"><span class="original">$39.99</span> <span class="discounted">$31.99</span></p>
+          <h3>Gorra San Antonio Spurs</h3>
+          <p class="price"><span class="original">C$750</span> <span class="discounted">C$600</span></p>
           <p class="countdown">Oferta termina en: <span class="timer">--:--:--</span></p>
           <button class="btn-comprar">Comprar</button>
         </div>
       </div>
-      <div class="offer-card" data-deadline="2025-07-05T23:59:59">
+      <div class="offer-card" data-deadline="2025-06-30T23:59:59">
         <div class="img-container">
-          <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks2.webp" alt="Gorra Azul Knicks - Oferta">
-          <div class="badge">-15%</div>
-        </div>
-        <div class="offer-content">
-          <h3>Gorra Azul Knicks</h3>
-          <p class="price"><span class="original">$34.99</span> <span class="discounted">$29.74</span></p>
-          <p class="countdown">Oferta termina en: <span class="timer">--:--:--</span></p>
-          <button class="btn-comprar">Comprar</button>
-        </div>
-      </div>
-      <div class="offer-card" data-deadline="2025-07-01T23:59:59">
-        <div class="img-container">
-          <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks3.webp" alt="Gorra Blanca Knicks - Oferta">
+          <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/denver.png" alt="Gorra Denver Nuggets - Oferta">
           <div class="badge">-25%</div>
         </div>
         <div class="offer-content">
-          <h3>Gorra Blanca Knicks</h3>
-          <p class="price"><span class="original">$35.99</span> <span class="discounted">$26.99</span></p>
+          <h3>Gorra Denver Nuggets</h3>
+          <p class="price"><span class="original">C$731</span> <span class="discounted">C$549</span></p>
           <p class="countdown">Oferta termina en: <span class="timer">--:--:--</span></p>
           <button class="btn-comprar">Comprar</button>
         </div>
       </div>
-      <div class="offer-card" data-deadline="2025-07-10T23:59:59">
+      <div class="offer-card" data-deadline="2025-06-30T23:59:59">
+      <div class="img-container">
+        <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/Jazz.png" alt="Gorra Utah Jazz - Oferta">
+        <div class="badge">-15%</div>
+      </div>
+      <div class="offer-content">
+        <h3>Gorra Utah Jazz</h3>
+        <p class="price"><span class="original">C$400</span> <span class="discounted">C$340</span></p>
+        <p class="countdown">Oferta termina en: <span class="timer">--:--:--</span></p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      </div>
+      <div class="offer-card" data-deadline="2025-06-30T23:59:59">
         <div class="img-container">
-          <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks4.webp" alt="Gorra Retro Knicks - Oferta">
-          <div class="badge">-30%</div>
+          <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras-Catalogo/Pacers.webp" alt="Gorra Indiana Pacers - Oferta">
+          <div class="badge">-10%</div>
         </div>
         <div class="offer-content">
-          <h3>Gorra Retro Knicks</h3>
-          <p class="price"><span class="original">$45.99</span> <span class="discounted">$32.19</span></p>
+          <h3>Gorra Indiana Pacers</h3>
+          <p class="price"><span class="original">C$600</span> <span class="discounted">C$540</span></p>
           <p class="countdown">Oferta termina en: <span class="timer">--:--:--</span></p>
           <button class="btn-comprar">Comprar</button>
         </div>
-      </div>
     </div>
   </div>
 </section>
@@ -279,25 +278,25 @@
     <h2 class="sales-title">Más Vendidas</h2>
     <div class="topsales-grid">
 
-      <div class="topsale-card">
-        <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks11.webp" alt="Gorra Classic Knicks">
-        <div class="topsale-info">
-          <h3>Gorra Classic Knicks</h3>
-          <p class="precio">$26.99</p>
-          <button class="btn-comprar">Comprar</button>
-          <div class="label-top">Top Ventas</div>
-        </div>
-      </div>
-      <div class="topsale-card">
-        <img src="/CapSpotNuevo/Imagenes/imagenes/Catalogo/gorraKnicks5.webp" alt="Gorra Edición Limitada">
-        <div class="topsale-info">
-          <h3>Gorra Edición Limitada</h3>
-          <p class="precio">$33.99</p>
-          <button class="btn-comprar">Comprar</button>
-          <div class="label-top">Top Ventas</div>
-        </div>
-      </div>
+<div class="topsale-card">
+  <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras/Bulls.png" alt="Gorra Chicago Bulls" class="img-gorra-top">
+  <div class="topsale-info">
+    <h3>Gorra Chicago Bulls</h3>
+    <p class="precio">C$400</p>
+    <button class="btn-comprar">Comprar</button>
+    <div class="label-top">Top Ventas</div>
+  </div>
+</div>
 
+<div class="topsale-card">
+  <img src="/CapSpotNuevo/Imagenes/imagenes/Gorras/Lakers.webp" alt="Gorra Los Angeles Lakers" class="img-gorra-top">
+  <div class="topsale-info">
+    <h3>Gorra Los Angeles Lakers</h3>
+    <p class="precio">C$350</p>
+    <button class="btn-comprar">Comprar</button>
+    <div class="label-top">Top Ventas</div>
+  </div>
+</div>
     </div>
   </div>
 </section>
@@ -337,7 +336,7 @@
   <div class="contenido">
     <h2>Mi Carrito</h2>
     <ul id="items"></ul>
-    <p id="total">Total: $0.00</p>
+    <p id="total">Total: C$0.00</p>
     <button id="limpear">Vaciar Carrito</button>
     <button id="cerrar">Cerrar</button>
   </div>
